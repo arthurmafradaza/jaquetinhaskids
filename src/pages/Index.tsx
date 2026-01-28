@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";
 import QualityProof from "@/components/QualityProof";
+import WhyMomsLove from "@/components/WhyMomsLove";
 import ProductGallery from "@/components/ProductGallery";
 import Testimonials from "@/components/Testimonials";
 import Guarantees from "@/components/Guarantees";
@@ -15,6 +16,7 @@ const Index = () => {
       <HeroSection />
       <TrustBar />
       <QualityProof />
+      <WhyMomsLove />
       <ProductGallery />
       <Testimonials />
       <Guarantees />

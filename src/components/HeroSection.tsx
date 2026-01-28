@@ -1,74 +1,107 @@
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { Star } from "lucide-react";
 import heroChild from "@/assets/hero-child.jpg";
 
 const HeroSection = () => {
-  const trustItems = [
-    "Entrega Segura",
-    "Troca Grátis",
-    "Qualidade Certificada"
-  ];
-
   return (
-    <section className="gradient-hero min-h-[90vh] flex items-center">
-      <div className="container-main w-full">
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center py-12 lg:py-0">
-          {/* Content - 60% */}
-          <motion.div 
-            className="lg:col-span-3 text-center lg:text-left"
-            initial={{ opacity: 0, y: 20 }}
+    <section className="gradient-hero py-16 md:py-24">
+      <div className="container-main">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          {/* Badge */}
+          <motion.div
+            className="inline-flex items-center gap-2 bg-ctaOrange/10 text-ctaOrange px-4 py-2 rounded-full text-sm font-medium mb-6"
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <h1 className="text-hero-mobile md:text-hero text-foreground mb-6">
-              Jaquetas de Qualidade que Seu Filho Vai{" "}
-              <span className="text-primary">Amar Usar</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Personagens incríveis, tecidos certificados e conforto garantido para os pequenos aventureiros.
-            </p>
-
-            <motion.a
-              href="#personagens"
-              className="btn-primary inline-block mb-8"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Ver Todos os Personagens
-            </motion.a>
-
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6">
-              {trustItems.map((item, index) => (
-                <motion.div
-                  key={item}
-                  className="flex items-center gap-2 text-sm md:text-base text-foreground"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                >
-                  <CheckCircle className="w-5 h-5 text-secondary" />
-                  <span>{item}</span>
-                </motion.div>
-              ))}
-            </div>
+            🔥 Nova Coleção de Inverno
           </motion.div>
 
-          {/* Image - 40% */}
-          <motion.div 
-            className="lg:col-span-2 flex justify-center lg:justify-end"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+          {/* Headline */}
+          <motion.h1 
+            className="text-hero-mobile md:text-hero text-foreground mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Aqueça seu filho com os{" "}
+            <span className="text-heroBlue">heróis favoritos</span>
+          </motion.h1>
+          
+          {/* Subheadline */}
+          <motion.p 
+            className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl" />
-              <img
-                src={heroChild}
-                alt="Criança feliz usando jaqueta estampada"
-                className="relative w-full max-w-md lg:max-w-lg rounded-3xl shadow-2xl object-cover"
-                loading="eager"
-              />
+            A jaqueta perfeita para proteger seu filho do frio com muito estilo e diversão. 
+            Material térmico de alta qualidade, capuz forrado e estampas que eles amam. 
+            Conforto térmico, durabilidade e diversão em uma única peça.
+          </motion.p>
+
+          {/* Image */}
+          <motion.div 
+            className="relative mb-10 w-full max-w-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <div className="absolute -inset-4 bg-ctaOrange/10 rounded-3xl blur-2xl" />
+            <img
+              src={heroChild}
+              alt="Criança feliz usando jaqueta estampada"
+              className="relative w-full rounded-3xl shadow-2xl object-cover"
+              loading="eager"
+            />
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.a
+            href="#personagens"
+            className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-white rounded-xl transition-all duration-300 mb-8"
+            style={{ 
+              background: 'linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(25 100% 50%) 100%)',
+              boxShadow: '0 4px 16px hsla(25, 100%, 60%, 0.4)'
+            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            whileHover={{ scale: 1.05, boxShadow: '0 8px 24px hsla(25, 100%, 60%, 0.5)' }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Garantir Agora
+          </motion.a>
+
+          {/* Social Proof */}
+          <motion.div
+            className="flex flex-col sm:flex-row items-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            {/* Avatars */}
+            <div className="flex -space-x-3">
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-white flex items-center justify-center"
+                >
+                  <span className="text-sm">👤</span>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col items-center sm:items-start">
+              {/* Stars */}
+              <div className="flex gap-0.5 mb-1">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-accent text-yellow-accent" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground font-medium">
+                500+ pais felizes
+              </span>
             </div>
           </motion.div>
         </div>

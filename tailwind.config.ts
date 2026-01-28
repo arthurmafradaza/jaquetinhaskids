@@ -58,6 +58,13 @@ export default {
         yellow: {
           accent: "hsl(var(--yellow-accent))",
         },
+        heroBlue: "hsl(var(--hero-blue))",
+        ctaOrange: "hsl(var(--cta-orange))",
+        iconBg: {
+          pink: "hsl(var(--icon-bg-pink))",
+          blue: "hsl(var(--icon-bg-blue))",
+          yellow: "hsl(var(--icon-bg-yellow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

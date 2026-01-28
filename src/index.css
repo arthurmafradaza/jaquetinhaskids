@@ -47,6 +47,13 @@
     --turquoise: 174 64% 55%;
     --yellow-accent: 49 100% 71%;
     --text-dark: 200 18% 20%;
+    --hero-blue: 220 100% 50%;
+    --cta-orange: 25 100% 60%;
+    
+    /* Card icon backgrounds */
+    --icon-bg-pink: 340 100% 97%;
+    --icon-bg-blue: 200 100% 97%;
+    --icon-bg-yellow: 49 100% 94%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(340 100% 97%) 0%, hsl(0 0% 100%) 100%);
