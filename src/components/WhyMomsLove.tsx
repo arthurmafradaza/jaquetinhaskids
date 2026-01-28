@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
-import { Award, Shield, Heart } from "lucide-react";
+import { Medal, Smile, Heart } from "lucide-react";
 
-const QualityProof = () => {
+const WhyMomsLove = () => {
   const cards = [
     {
-      icon: Award,
+      icon: Medal,
       iconBgClass: "bg-iconBg-pink",
       iconColorClass: "text-primary",
       title: "Qualidade Premium",
-      description: "Tecidos selecionados, costuras reforçadas e materiais atóxicos aprovados para crianças."
+      description: "Materiais selecionados rigorosamente para garantir durabilidade mesmo nas brincadeiras mais intensas."
     },
     {
-      icon: Shield,
-      iconBgClass: "bg-iconBg-blue",
-      iconColorClass: "text-secondary",
-      title: "Durabilidade Testada",
-      description: "Jaquetas que resistem a brincadeiras, lavagens e o uso diário do seu pequeno."
+      icon: Smile,
+      iconBgClass: "bg-iconBg-yellow",
+      iconColorClass: "text-yellow-accent",
+      title: "Personagens Amados",
+      description: "Designs exclusivos dos heróis e personagens que fazem os olhos das crianças brilharem de alegria."
     },
     {
       icon: Heart,
-      iconBgClass: "bg-iconBg-yellow",
-      iconColorClass: "text-yellow-accent",
+      iconBgClass: "bg-iconBg-blue",
+      iconColorClass: "text-secondary",
       title: "Conforto Garantido",
-      description: "Forros macios, sem irritações na pele e liberdade total de movimento."
+      description: "Costuras especiais planas e tecido macio que não pinica, perfeito para peles sensíveis."
     }
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-muted/30">
       <div className="container-main">
         <motion.div
           className="text-center mb-12"
@@ -35,9 +35,12 @@ const QualityProof = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-section-mobile md:text-section text-foreground">
-            Por que mães escolhem <span className="text-primary">nossas jaquetas</span>
+          <h2 className="text-section-mobile md:text-section text-foreground mb-4">
+            Por que as mães amam?
           </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Pensamos em cada detalhe para que você tenha tranquilidade e seu filho tenha felicidade.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
@@ -73,4 +76,4 @@ const QualityProof = () => {
   );
 };
 
-export default QualityProof;
+export default WhyMomsLove;
