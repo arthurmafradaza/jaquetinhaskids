@@ -100,7 +100,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+  * {
     font-family: 'Poppins', sans-serif;
   }
 
