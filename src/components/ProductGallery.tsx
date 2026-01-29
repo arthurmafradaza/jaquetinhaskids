@@ -54,23 +54,23 @@ const ProductGallery = () => {
   ];
 
   return (
-    <section id="personagens" className="section-padding bg-muted/50">
-      <div className="container-main">
+    <section id="personagens" className="py-12 md:py-20 lg:py-24 bg-muted/50">
+      <div className="container-main px-4 md:px-6">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-section-mobile md:text-section text-foreground mb-4">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-2 md:mb-4">
             Escolha o Personagem Favorito do <span className="text-primary">Seu Filho</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto">
             Modelos exclusivos que fazem a alegria dos pequenos
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -88,15 +88,15 @@ const ProductGallery = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+              <div className="p-4 md:p-6">
+                <h3 className="text-base md:text-lg font-semibold text-foreground mb-1 md:mb-2">
                   {product.name}
                 </h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground text-sm mb-3 md:mb-4">
                   {product.description}
                 </p>
                 <motion.button
-                  className="btn-secondary w-full"
+                  className="btn-secondary w-full text-sm md:text-base py-2.5 md:py-3"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
